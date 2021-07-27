@@ -15,10 +15,12 @@ const stringCalculator = (input) => {
     }
     const input_array = inputWithoutDelimiter.trim().split(comma_newLine_delimiter);
     return input_array.reduce((acc, cv) => {
-        if(parseInt(cv) > 1000) {
-            return parseInt(acc);
+        const cvInt = parseInt(cv);
+        const accInt = parseInt(acc);
+        if(cvInt > 1000) {
+            return accInt;
         }
-        return parseInt(acc) + parseInt(cv)}
+        return accInt + cvInt}
     )
 }
 
