@@ -16,4 +16,7 @@ describe('String Calculator', () => {
     it('should handle new lines', () => {
         expect(stringCalculator("1\n2\n3\n4\n5")).toEqual(15);
     })
+    it('should handle new lines and commas', () => {
+        expect(stringCalculator("1\n2, 3\n4, 5")).toEqual(15);
+    })
 })
