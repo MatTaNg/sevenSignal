@@ -1,4 +1,7 @@
 const stringCalculator = (input) => {
+    if(parseInt(input) < 0) {
+        throw new Error(`negatives not allowed ${input}`);
+    }
     const hasDelimiter = input[0] === "/" && input[1] === "/";
     const delimiter = !hasDelimiter ? '' : `|${input.substring(2, input.indexOf("\n"))}`;
     const inputWithoutDelimiter = !hasDelimiter ? input : input.substring(input.indexOf('\n'))
