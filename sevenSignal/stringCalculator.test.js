@@ -13,4 +13,7 @@ describe('String Calculator', () => {
     it('should add five numbers', () => {
         expect(stringCalculator("1, 2, 3, 4, 5")).toEqual(15);
     })
+    it('should handle new lines', () => {
+        expect(stringCalculator("1\n2\n3\n4\n5")).toEqual(15);
+    })
 })
