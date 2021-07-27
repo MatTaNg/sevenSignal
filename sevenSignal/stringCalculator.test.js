@@ -7,4 +7,7 @@ describe('String Calculator', () => {
     it('should add one number', () => {
         expect(stringCalculator("1")).toEqual(1);
     })
+    it('should add two numbers', () => {
+        expect(stringCalculator("1, 2")).toEqual(3);
+    })
 })
