@@ -10,4 +10,7 @@ describe('String Calculator', () => {
     it('should add two numbers', () => {
         expect(stringCalculator("1, 2")).toEqual(3);
     })
+    it('should add five numbers', () => {
+        expect(stringCalculator("1, 2, 3, 4, 5")).toEqual(15);
+    })
 })
