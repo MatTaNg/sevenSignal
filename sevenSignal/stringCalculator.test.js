@@ -19,4 +19,7 @@ describe('String Calculator', () => {
     it('should handle new lines and commas', () => {
         expect(stringCalculator("1\n2, 3\n4, 5")).toEqual(15);
     })
+    it('should handle a custom delimiter', () => {
+        expect(stringCalculator("//;\n1;2")).toEqual(3);
+    })
 })
