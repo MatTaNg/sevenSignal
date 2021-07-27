@@ -14,7 +14,12 @@ const stringCalculator = (input) => {
         return parseInt(input);
     }
     const input_array = inputWithoutDelimiter.trim().split(comma_newLine_delimiter);
-    return input_array.reduce((acc, cv) => parseInt(acc) + parseInt(cv))
+    return input_array.reduce((acc, cv) => {
+        if(parseInt(cv) > 1000) {
+            return parseInt(acc);
+        }
+        return parseInt(acc) + parseInt(cv)}
+    )
 }
 
 module.exports = stringCalculator
